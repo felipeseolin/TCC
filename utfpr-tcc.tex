@@ -1,0 +1,79 @@
+% ---------------------------------------------------------------------------------------------------------------
+% TEMPLATE PARA TRABALHO DE CONCLUSÃO DE CURSO
+% Universidade Tecnológica Federal do Paraná - UTFPR
+% Customização da classe abnTeX2 (http://www.abntex.net.br/) para as normas da UTFPR
+%
+% Autores: Diego Marczal
+% 	       Michael Vornes <https://github.com/mvornes>
+% Adaptação (DACOM-CP): Silvio Ricardo Rodrigues Sanches
+%
+%----------------------------------------------------------------------------------------------------------------
+% Codificação: UTF-8
+% LaTeX:  abnTeX2          
+% ---------------------------------------------------------------------------------------------------------------
+
+
+% CARREGA CLASSE PERSONALIZADA DA UTFPR--------------------------------------------------------------------------
+\documentclass[%twoside,                   % Impressão em frente e verso
+    	        oneside,                   % Impressão apenas frente
+]{configuracoes/utfpr-abntex2}
+
+
+% INCLUI ARQUIVOS DE CONFIGURAÇÕES-------------------------------------------------------------------------------
+\include{configuracoes/pacotes}
+\include{configuracoes/configuracoes-pdf}
+
+
+% INCLUI ARQUIVOS DO TRABALHO DE CONCLUSÃO DE CURSO (PRÉ-TEXTUAIS, TEXTUAIS, PÓS-TEXTUAIS)-----------------------
+
+% INSERE CAPA E FOLHA DE ROSTO
+\include{estrutura/pre-textuais/capa}
+\include{estrutura/pre-textuais/folha-rosto}
+
+\begin{document}
+
+\pretextual
+% Comando para imprimir Capa
+\imprimircapa
+% Comando para imprimir Folha de rosto
+\imprimirfolhaderosto{}
+% INSERE ELEMENTOS PRÉ-TEXTUAIS
+
+% Resumo em Português
+\include{estrutura/pre-textuais/resumo}
+% Resumo em Inglês
+\include{estrutura/pre-textuais/abstract}
+% Lista de Figuras
+\include{estrutura/pre-textuais/listas/listas-ilustracoes/lista-figuras}
+% Lista de Tabelas
+\include{estrutura/pre-textuais/listas/lista-tabelas}
+% Lista de Abreviaturas e Siglas
+\include{estrutura/pre-textuais/listas/lista-siglas}
+% Sumário
+\include{estrutura/pre-textuais/sumario}
+
+% INSERE ELEMENTOS TEXTUAIS
+\textual
+% Introdução
+\include{estrutura/textuais/introducao}
+% Fundamentação Histórica
+\include{estrutura/textuais/desenvolvimento/fundamentacao}
+% Proposta
+\include{estrutura/textuais/desenvolvimento/proposta}
+% Resultados
+\include{estrutura/textuais/desenvolvimento/resultados}
+% Cronograma
+% \include{estrutura/textuais/desenvolvimento/cronograma}
+% Considerações Finais
+% \include{estrutura/textuais/consideracoes-finais}
+% Conclusão
+\include{estrutura/textuais/desenvolvimento/conclusao}
+
+% INSERE ELEMENTOS PÓS-TEXTUAIS
+\postextual
+% Referências
+\include{estrutura/pos-textuais/referencias}
+% Apêndices
+\include{estrutura/pos-textuais/apendices}
+
+\end{document}

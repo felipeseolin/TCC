@@ -1,0 +1,64 @@
+% INTRODUÇÃO-------------------------------------------------------------------
+
+\chapter{INTRODUÇÃO}
+\label{chap:introducao}
+
+\par A visão é o mais avançado dos sentidos humanos, por consequência, as imagens são elementos de grande importância. No entanto, a espécie humana possui uma limitação quanto a captação de imagens, tendo acesso apenas à camada visível do espectro eletromagnético. Limitação esta que equipamentos da área de processamento de imagens não possuem pois alcançam dos raios gama às ondas rádio do espectro \cite{valencca2011monitorizaccao}.
+
+\par O mundo está repleto de imagens, as quais possuem uma vasta quantidade de dados que podem ser encontrados e processados de formas distintas. Isto não é diferente quando se trata de imagens digitais, pois estas representam uma quantia significativa de medições existentes. Porém, para imagens de ressonância magnéticas, tomografias, observações astronômicas e outras se tornarem compreensíveis é preciso extrair informações: ação possível devido ao processamento de imagens digitais \cite{ScikitImage}.
+
+\par Sendo assim, o processamento de imagens digitais tem como principal objetivo o tratamento de tais dados das imagens \cite{ScikitImage}. Para \citeonline{Gonzalez2009}, esta área não diz respeito apenas à entrada de uma imagem que é processada e resulta em outra, mas também ao reconhecimento de determinados atributos, como cores e texturas, além da capacidade de uma máquina de reconhecer padrões e até mesmo aprender com as informações presentes.
+
+\par \citeonline{jarbas-analise-textura} ainda acrescentam que o processamento de imagem possui grande importância na computação visual, sendo a textura caracterizada como um dos elementos principais e essenciais para alguns campos como: detecção de objetos, recuperação de imagens, sensoriamento remoto entre outros. 
+
+\par Apesar disto, a textura não possui uma definição exata na literatura. Alguns a caracterizam como a repetição de um modelo na imagem com pequenas variações. Outros, no entanto, dizem que até mesmo a ausência de padrões é capaz de caracterizar uma textura. Uma das definições mais bem aceitas, diz que textura corresponde a padrões visuais complexos que são formados por entidades ou sub-padrões, com características específicas como: tamanho, brilho e outras \cite{jarbas-color-texture}. 
+
+\par Atualmente, a textura tem se tornado um atributo de descrição muito estudado e fonte de diversas pesquisas. Apesar de já existirem métodos consolidados, há uma tendência de novos estudos que buscam abordagens diferentes, sejam por matrizes de co-ocorrência, análise espectral ou outros \cite{jarbas-analise-textura}. 
+
+\par Posto isto, o objetivo deste trabalho é desenvolver uma nova abordagem para a descrição de texturas em imagens digitais, sendo baseada em árvores geradoras mínimas, também conhecidas como \textit{minimum spanning trees} (MST). Assim, sendo capaz de contribuir para esta área, a partir das descobertas feitas pela análise de seu desempenho, além de preencher uma lacuna de conhecimento existente sobre a utilização da MST para a descrição de texturas.
+
+
+\section{PROBLEMA}
+\label{sec:problema}
+
+\par Atualmente podemos encontrar diversos algoritmos de descrição de imagens, tais quais podem se dividir em descrição de: cor, textura e/ou forma. Para descrição de cor há por exemplo: \textit{Border/Interior Pixel Classification} (BIC) \cite{bic-stehling2002compact}, \textit{Global Color Histogram} (CGH) \cite{cgh-stricker1995similarity} e \textit{Local Color Histogram} (LHC) \cite{lhc-smith1996local}. Já para a descrição de textura existem as seguintes técnicas: Matrizes \textit{Run-length}, \textit{Local Binary Patterns} (LBP) \cite{lbp-guo2010rotation} e  Descritores de Haralick \cite{haralick1973textural}. Por fim, para se descrever formas há: Assinatura, Código da cadeia, segundo Freeman, Momentos, segundo Ming-Kuei Hu, entre outros \cite{Gonzalez2009}.
+\par Assim como provado por \citeonline{jarbas-color-texture}, novos algoritmos podem ser capazes de extrair propriedades inéditas e podem ser mais eficientes e/ou eficazes que outros, seja por níveis de acurácia, custo computacional ou outras medidas de comparação.
+\par Levando em consideração as evidências de que ainda não existem algoritmos baseados em árvores geradoras mínimas, a lacuna de conhecimento nesta área, aceitação de novas abordagens, junto ao sucesso de outros trabalhos que utilizam grafos para a descrição de imagens, conclui-se que esta abordagem é fundamentada e se faz necessária.
+
+\section{JUSTIFICATIVA}
+\label{sec:justificativa}
+
+\par Como mencionado anteriormente, existem algoritmos de descrição de imagens, porém há uma escassez de técnicas baseadas em grafos, para descrição das mesmas, as quais já se mostraram válidas em outros trabalhos, conforme também será retratado na \autoref{sec:usografosdescimg}.
+
+\par A área de descrição de imagens está aberta à sugestão de novos modelos que quando comparados aos tradicionais, podem se sobressair em determinadas circunstâncias e, por conseguinte, serem considerados melhores em diferentes aspectos, como por exemplo o aumento da acurácia. 
+
+\par Por tais motivos, este trabalho pretende apresentar uma nova proposta de algoritmo para descrição de texturas, testar a hipótese de eficácia do uso de MST e desenvolver esta nova forma de extração de características de imagens, para assim alcançar uma abordagem que apresente resultados significantes quando comparado a algoritmos tradicionais.
+
+\section{OBJETIVOS}
+\label{sec:objetivos}
+
+\par Nesta subseção foram pautados os objetivos desta pesquisa, os quais descrevem de uma forma mais específica o que se almeja atingir com a conclusão do trabalho.
+
+\subsection{OBJETIVO GERAL}
+\label{subsec:objgerais}
+
+\par Desenvolver, testar e validar um novo algoritmo de descrição de texturas em imagens digitais, baseado em estudo de grafos, mais especificamente em árvores geradoras mínimas. 
+
+\subsection{OBJETIVOS ESPECÍFICOS}
+\label{subsec:objespecificos}
+
+\begin{itemize}
+    \item Contribuir com a área de processamento de imagens a partir da iniciativa de desenvolvimento de novas pesquisas neste campo;
+    \item Auxiliar no preenchimento da lacuna de conhecimento existente sobre a utilização de árvores geradoras mínimas para a descrição de textura;
+    \item Apresentar a relevância de uso de grafos em etapas do processamento de imagens;
+    \item Desenvolver um algoritmo que seja capaz de descrever a textura de uma imagem com maior eficácia, quando comparado com os algoritmos já consolidados e presentes na literatura.
+\end{itemize}
+
+\begin{comment}
+\par No tópico a seguir serão abordados em mais detalhes as etapas percorridas para tal implementação, bem como o posterior esclarecimento da divisão do trabalho escrito.
+\end{comment}
+
+\section{ESTRUTURA DO TEXTO}
+\label{sec:organizacaodoc}
+
+\par A introdução, \autoref{chap:introducao}, apresenta aspectos iniciais para o desenvolvimento do trabalho, abordando o problema a ser explorado, as motivações para a realização do mesmo e os objetivos deste projeto e método utilizado para alcançá-los. O \autoref{chap:fundamentacao}, fundamentação teórica, é responsável por levantar os principais conceitos de base para a construção deste trabalho. A partir de tal fundamentação é possível evoluir a ideia e aprofundar os conhecimentos para o desenvolvimento, apresentado no PARAGRAFO TAL COLOCAR AQUI, no qual... Por fim, no capítulo TAL COLOCAR, serão descritos os resultados dos diferentes testes, seguido das considerações finais no CAPITULO TAL.
