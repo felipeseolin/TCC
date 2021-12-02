@@ -49,6 +49,7 @@
 \RequirePackage[brazilian, hyperpageref]{backref}       % Produzir índice nas referências
 \RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
+\RequirePackage{graphicx}
 
 % -----------------------------------------------------------------------------
 % Configurações gerais
@@ -157,6 +158,7 @@
 \renewcommand{\textual}
 {%
     \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
+    \setcounter{page}{8}
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -240,7 +242,7 @@
 % Define os títulos das listas
 \addto\captionsbrazil{%
 % Ajusta nomes padrões do babel
-    \renewcommand{\listadesiglasname}{LISTA DE ABREVIATURAS E SIGLAS}
+    \renewcommand{\listadesiglasname}{LISTA DE ABREVIATURAS, ACRÔNIMOS E SIGLAS}
     \renewcommand{\listadesimbolosname}{LISTA DE S\'{I}MBOLOS}
     \renewcommand{\listfigurename}{LISTA DE FIGURAS}
     \renewcommand{\listtablename}{LISTA DE TABELAS}

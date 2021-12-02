@@ -16,7 +16,7 @@
     \item Ligar todos os \textit{pixels} com seus vizinhos, caracterizando vizinhança 8, ou 4 caso o \textit{pixel} esteja na borda;
     \item Atribuir valores (pesos) a cada aresta do grafo formado. Este valor corresponde ao módulo da diferença entre os valores do pixel em \textit{8-bits}, ou seja, valores entre 0 e 255;
     \item Encontrar uma árvore geradora mínima do grafo;
-    \item Extrair um vetor de características a partir dos valores obtidos em cada aresta da MST, tal vetor é formado pela: média simples, desvio padrão, grau de assimetria, curtose e entropia.
+    \item Extrair um vetor de características a partir dos valores obtidos em cada aresta da MST. Tal vetor é formado pela: média simples, desvio padrão, grau de assimetria, curtose e entropia.
     % \item Analisar resultado obtido;
     % \item Repetir os passos anteriores com um \textit{dataset} de várias imagens;
     % \item Comparar o algoritmo realizado com outros algoritmos presentes na literatura;
@@ -29,7 +29,7 @@
     \centering
     \caption{Diagrama de etapas do método desenvolvido}
     \includegraphics[width=1\textwidth]{./dados/figuras/metodo.png}
-    \fonte{Autoria Própria}
+    \fonte{Autoria Própria.}
     \label{fig:metodo}
 \end{figure}
 
@@ -82,27 +82,28 @@
 \section{TECNOLOGIAS E FERRAMENTAS}
 \label{sec:tecnologiasferramentas}
 
-\par Atualmente existem várias ferramentas que podem auxiliar o processamento digital de imagens, sendo uma dessas a \textit{Open Source Computer Vision Library} (\textit{OpenCV}).
-A biblioteca \textit{OpenCV} é produzida em C++ e atualmente está disponível para uso para as linguagens de programação: \textit{python}, \textit{java}, linguagem C e C++ \cite{opencv_library}.
+\par Atualmente existem várias ferramentas que podem auxiliar o processamento digital de imagens, sendo uma dessas a \textit{Open Source Computer Vision Library} (OpenCV).
+A biblioteca OpenCV é produzida em C++ e atualmente está disponível para uso por linguagens de programação como: python, java, linguagem C e C++ \cite{opencv_library}.
 
 \par Tal biblioteca, aberta à comunidade, possui uma estrutura modular, de forma que alguns de seus módulos sejam: processamento de imagens, análise de vídeo, calibração de câmera e reconstrução em 3D, funcionalidades de \textit{framework} 2D, detecção de objetos, \textit{Graphical User Interface} (GUI) de alto nível, entrada e saída de vídeo, entre outros \cite{opencv_library}.
 
-\par No entanto, este projeto será desenvolvido utilizando a biblioteca \textit{Scikit-Image}, a qual também é \textit{open-source} e está em constante atualização, como é possível observar em seu \textit{github}. Esta biblioteca é escrita em \textit{python} e também é utilizada por programas escritos em \textit{python}.
+\par No entanto, este projeto será desenvolvido utilizando a biblioteca Scikit-Image, a qual também é \textit{open-source} e está em constante atualização, como é possível observar em seu GitHub. Esta biblioteca é escrita em python e também é utilizada por programas escritos em python.
 
-\par A \textit{Scikit-Image} possui várias funções que podem ser facilmente utilizadas, fornecendo rotinas versáteis e intuitivas de processamento digital de imagens, provendo sub-módulos dedicados a: cor, desenho, exposição, análise de texturas e bordas, grafos, entrada e saída, entre tantos outros que indiscutivelmente podem auxiliar a muitos na construção de um \textit{software} destinado a processamento de imagens  \cite{ScikitImage}.
+\par A Scikit-Image possui várias funções que podem ser facilmente utilizadas, fornecendo rotinas versáteis e intuitivas de processamento digital de imagens, provendo sub-módulos dedicados a: cor, desenho, exposição, análise de texturas e bordas, grafos, entrada e saída, entre tantos outros que indiscutivelmente podem auxiliar a muitos na construção de um \textit{software} destinado a processamento de imagens  \cite{ScikitImage}.
 
-\par A escolha de tal biblioteca foi dada principalmente devido as suas funcionalidades que estão em constante atualização, por ser feita nativamente em \textit{python}, seu uso ser intuitivo e vários outros aspectos que a tornam mais interessante que a \textit{OpenCV} para este projeto.
+\par A escolha de tal biblioteca foi dada principalmente devido as suas funcionalidades que estão em constante atualização, por ser feita nativamente em python, seu uso ser intuitivo e vários outros aspectos que a tornam mais interessante que a OpenCV para este projeto.
 
-\par Como linguagem de programação, será adotada a linguagem \textit{python}, pois possui consigo várias vantagens, que podem ser observadas facilmente em seu \textit{website} e \textit{github}, tais como: a vasta coleção de bibliotecas, sendo várias de cunho científico, a possibilidade da escrita de códigos legíveis e sua comunidade presenta na evolução da linguagem, por ser \textit{open-source}.
+\par Como linguagem de programação, será adotada a linguagem python, pois possui consigo várias vantagens, que podem ser observadas facilmente em seu \textit{website} e GitHub tais como: a vasta coleção de bibliotecas, sendo várias de cunho científico, a possibilidade da escrita de códigos legíveis e sua comunidade presenta na evolução da linguagem, por ser \textit{open-source}.
 
-\par Por fim, será utilizada a biblioteca \textit{igraph}, que irá auxiliar a construir os grafos para uma determinada imagem e também encontrar a árvore geradora mínima \cite{igraph}. Além da biblioteca \textit{scikit-learn} a qual será utilizada durante as validações para testar o algoritmo e compará-lo a outros já existentes. \cite{scikit-learn}.
+
+\par Por fim, será utilizada a biblioteca igraph, que irá auxiliar a construir os grafos para uma determinada imagem e também encontrar a árvore geradora mínima \cite{igraph}. Além da biblioteca scikit-learn a qual será utilizada durante as validações para testar o algoritmo e compará-lo a outros já existentes \cite{scikit-learn}.
 
 \section{VALIDAÇÕES}
 \label{sec:validacoes}
 
 \par Assim que o algoritmo tenha atendido todas as primitivas e cumprido com o esperado, será necessário comprovar a sua eficácia. Para isto, o algoritmo será comparado com outros métodos de descrição de imagens, mais especificamente de texturas, já presentes na literatura, sendo estes: Gabor \cite{gaborZhang2000content}, Haralick \cite{haralick1973textural}, \textit{local binary patterns} (LBP) \cite{lbp-guo2010rotation} e Tamura \cite{tamura1978textural}.
 
-\par De modo a comparar os extratores, serão realizados alguns testes com diferentes algoritmos de aprendizado supervisionado, como: \textit{decision tree}, k-nearest neighbors (KNN), \textit{linear support vector classification} (\textit{Linear} SVC) e \textit{c-support vector classification} (SVC).
+\par De modo a comparar os extratores, serão realizados alguns testes com diferentes algoritmos de aprendizado supervisionado, como: \textit{decision tree}, \textit{k-nearest neighbors} (KNN), \textit{linear support vector classification} (\textit{Linear} SVC) e \textit{c-support vector classification} (SVC).
 
 \par Para o algoritmo de aprendizado supervisionado, deve-se manter a semente com um valor igual a 5 (cinco), garantindo que, ao ser executado com as mesmas condições, o algoritmo sempre desempenhe os mesmos resultados. Além disso, deve-se separar o \textit{dataset} em 20\% teste e 80\% treino, ser capaz de ler arquivos em formato \textit{attribute-relation file format} (ARFF) e \textit{comma-separated values} (CSV).
 
@@ -134,9 +135,9 @@ A biblioteca \textit{OpenCV} é produzida em C++ e atualmente está disponível 
 
 \begin{figure}[!h]
     \centering
-    \caption{Exemplos de imagens disponíveis no \textit{dataset} USC-SIPI \textit{Textures}.}
+    \caption{Exemplos de imagens disponíveis no \textit{dataset} USC-SIPI \textit{Textures}}
     \includegraphics[width=0.7\textwidth]{./dados/figuras/usc-sipi.png}
-    \fonte{\citeonline{weber1997usc}}
+    \fonte{\citeonline{weber1997usc}.}
     \label{fig:usc-sipi}
 \end{figure}
 
@@ -148,9 +149,9 @@ A biblioteca \textit{OpenCV} é produzida em C++ e atualmente está disponível 
 
 \begin{figure}[!h]
     \centering
-    \caption{Exemplos de imagens disponíveis no \textit{dataset} Kylberg.}
+    \caption{Exemplos de imagens disponíveis no \textit{dataset} Kylberg}
     \includegraphics[width=0.7\textwidth]{./dados/figuras/kylberg.jpg}
-    \fonte{\citeonline{Kylberg2011c}}
+    \fonte{\citeonline{Kylberg2011c}.}
     \label{fig:kylberg}
 \end{figure}
 
@@ -158,11 +159,11 @@ A biblioteca \textit{OpenCV} é produzida em C++ e atualmente está disponível 
 \subsubsection{USPTEX}
 \label{subsubsec:usptex}
 
-\par Este \textit{dataset} possui um total de 2.292 imagens, dividas em 191 classes, todas com resolução de 128x128 \textit{pixels}, apesar das imagens originais estarem em 512x512 \textit{pixels}. Estas possuem texturas com cores naturais adquiridas sob uma fonte de luz fixa desconhecida, alguns exemplos destas estão disponibilizados na \autoref{fig:usptex} \cite{usptex}.
+\par Este \textit{dataset} possui um total de 2.292 imagens, dividas em 191 classes, todas com resolução de 128x128 \textit{pixels}, apesar das imagens originais estarem em 512x512 \textit{pixels}. Estas possuem texturas com cores naturais adquiridas sob uma fonte de luz fixa desconhecida. Alguns exemplos destas em sua forma original estão disponibilizados na \autoref{fig:usptex} \cite{usptex}. Vale ressaltar, que tal \textit{dataset} teve suas imagens convertidas em escala de cinza para utilização neste trabalho.
 
 \begin{figure}[!h]
     \centering
-    \caption{Exemplos de imagens disponíveis no USPtex.}
+    \caption{Exemplos de imagens disponíveis no USPtex}
     \includegraphics[width=0.7\textwidth]{./dados/figuras/USPtex.png}
     \fonte{\citeonline{usptex}.}
     \label{fig:usptex}
@@ -171,13 +172,13 @@ A biblioteca \textit{OpenCV} é produzida em C++ e atualmente está disponível 
 \subsubsection{VISTEX}
 \label{subsubsec:vistex}
 
-\par O \textit{Vision Texture} (VisTex), é um \textit{dataset} que provem uma quantia vasta de texturas de alta qualidade para aplicação em contextos de visão computacional. Dessa forma, as imagens retratam o mundo real e oferecem texturas tanto tradicionais quanto não tão tradicionais \cite{vistex}. Estas imagens são coloridas e possuem uma resolução de 128x128 \textit{pixels} e um total de 40 classes \cite{fekri2019new}. Para os testes foram consideradas 19 classes, totalizando 167 imagens. A \autoref{fig:vistex} expõe algumas exemplos deste \textit{dataset} utilizados nas validações.
+\par O \textit{Vision Texture} (VisTex), é um \textit{dataset} que provem uma quantia vasta de texturas de alta qualidade para aplicação em contextos de visão computacional. Dessa forma, as imagens retratam o mundo real e oferecem texturas tanto tradicionais quanto não tão tradicionais \cite{vistex}. Estas imagens são coloridas e possuem uma resolução de 128x128 \textit{pixels} e um total de 40 classes \cite{fekri2019new}. Para os testes foram consideradas 19 classes, totalizando 167 imagens, também transformadas em escala de cinza. A \autoref{fig:vistex} expõe algumas exemplos deste \textit{dataset} utilizados nas validações.
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
-    \caption{Exemplos de imagens disponíveis no VisTex.}
+    \caption{Exemplos de imagens disponíveis no VisTex}
     \includegraphics[width=0.7\textwidth]{./dados/figuras/vistex.png}
-    \fonte{\citeonline{vistex}}
+    \fonte{\citeonline{vistex}.}
     \label{fig:vistex}
 \end{figure}
 

@@ -9,15 +9,15 @@ Neste capítulo são apresentados os principais conceitos abordados neste trabal
 \label{sec:procimagens}
 
 \par A visão é o principal sentido do ser humano, pois é considerado o sentido mais aguçado e consequentemente avançado desta espécie. Porém a visão dos humanos ainda é limitada, pois podemos ver apenas um espectro de cores\footnote{A visão humana só é capaz de perceber uma faixa do espectro da luz, entre a luz vermelha e violeta, alternando entre o azul, verde e amarelo \cite{Gonzalez2000}.} entre outros limitadores. Isto se diverge de um computador, pois ele é capaz de receber certos ``estímulos'' que o fazem ``ver'' e ``compreender'' imagens além das restrições humanas, como por exemplo o uso de raios X para conceber figuras \cite{Gonzalez2009}.
-\par Mas afinal, o que é uma imagem digital? Muitos pensam que esta pode ser definida como um plano cartesiano, por conta de seus \textit{pixels} e da sua estrutura, todavia uma imagem é dita como uma função bidimensional, pois os eixos $x$ e $y$ representam o plano espacial, enquanto $f$ corresponde aos graus de cinza, sendo estes valores considerados finitos. Já os \textit{pixels} (\textit{pels}, \textit{picture elements} ou também \textit{image elements}) são os elementos que compõe a imagem. Cada um destes possuem características diferente, pois ocupam suas posições singulares e possuem valores que podem diferenciar entre si \cite{Gonzalez2009}.
+\par Mas afinal, o que é uma imagem digital? Muitos pensam que esta pode ser definida como um plano cartesiano, por conta de seus \textit{pixels} e da sua estrutura, todavia uma imagem é dita como uma função bidimensional, pois os eixos $x$ e $y$ representam o plano espacial, enquanto $f$ corresponde aos graus de cinza, sendo estes valores considerados finitos. Já os \textit{pixels} (\textit{pels}, \textit{picture elements} ou também \textit{image elements}) são os elementos que compõe a imagem. Cada um destes possuem características diferentes, pois ocupam suas posições singulares e possuem valores que podem diferenciar entre si \cite{Gonzalez2009}.
 
 \par O processamento digital de imagens surgiu a partir dos computadores digitais, os quais foram capazes de apresentar uma nova perspectiva de processamento de dados. Este conceito é profundamente discutido e diversos autores discordam entre si, visto que enquanto alguns defendem que o processamento digital de imagens diz respeito a um processo que tem como entrada uma imagem e como saída outra imagem de releitura da primeira, existem autores que discordam e argumentam que tal definição não abrange todo o conteúdo desta área \cite{Gonzalez2009}.
  
-\par Portanto, neste trabalho foi considerada a definição de \citeonline{Gonzalez2009}, na qual o autor defende que além da primeira definição apresentada\footnote{Processo que tem como entrada uma imagem e saída outra imagem.}, o processamento digital de imagens engloba procedimentos de compreensão e extração de características para o reconhecimento de determinados objetos.
+\par Portanto, neste trabalho foi considerada a definição de \citeonline{Gonzalez2009}, na qual os autores defendem que além da primeira definição apresentada\footnote{Processo que tem como entrada uma imagem e saída outra imagem.}, o processamento digital de imagens engloba procedimentos de compreensão e extração de características para o reconhecimento de determinados objetos.
 
 \subsection{ETAPAS EM PROCESSAMENTO DIGITAL DE IMAGENS}
 \label{subsec:etapas}
-Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma rotina em processamento digital de imagens, tais etapas podem ser observadas na \autoref{fig:etapas_processamento_imagens} e correspondem a:
+Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma rotina em processamento digital de imagens, tais quais podem ser observadas na \autoref{fig:etapas_processamento_imagens} e correspondem a:
 \begin{enumerate}
     \item Aquisição de imagens;
     \item Pré-processamento;
@@ -28,13 +28,13 @@ Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma roti
 
 \begin{figure}[!h]
     \centering
-    \caption{Passos fundamentais em processamento de imagens digitais.}
+    \caption{Passos fundamentais em processamento de imagens digitais}
     \includegraphics[width=1\textwidth]{./dados/figuras/etapas_processamento_imagens.png}
-    \fonte{\citeonline{Gonzalez2000}}
+    \fonte{\citeonline{Gonzalez2000}.}
     \label{fig:etapas_processamento_imagens}
 \end{figure}
 
-\par Como observado na \autoref{fig:etapas_processamento_imagens}, para a rotina ser executada é necessário um problema que necessite de um resultado final, assim, com as etapas sendo seguidas corretamente o sucesso na tarefa em questão se torna mais provável. 
+\par Como observado na \autoref{fig:etapas_processamento_imagens}, para a rotina ser executada é necessário um problema que necessite de um resultado final, assim, com as etapas sendo seguidas corretamente o sucesso da tarefa em questão se torna mais provável. 
 
 \par Sendo assim, o processamento digital de imagens inicia-se a partir da aquisição. Para isto, normalmente aparenta-se necessárias câmeras digitais, porém não é apenas tal dispositivo que é capaz de captar sinais e transformá-los em uma imagem digital, também existem outros sensores de imageamento, basta que este possa captar uma banda do espectro de energia eletromagnética. Após a captura é necessário um dispositivo conhecido como digitalizador, o qual é responsável por converter as informações dos sensores que captaram a informação em uma saída digital.
 
@@ -42,7 +42,7 @@ Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma roti
 
 \par Em seguida se encontra a considerada mais difícil etapa do processamento digital de imagens: a segmentação. O uso de algoritmos fracos neste momento pode causar uma falha em todo o processo. Apenas algoritmos adequados podem auxiliar e aumentar a garantia de sucesso ao final. Logo, a segmentação é responsável por decompor a imagem em partes ou objetos, obtendo como resultado \textit{pixels}, conhecidos como \textit{raw pixel data}, o que representa uma área e suas bordas, sendo sempre necessária a conversão dos dados para o uso computacional.
 
-\par Já a etapa representação e descrição, também conhecida como seleção de características, é responsável por identificar novas características em uma área anteriormente identificada, as quais são referentes a cor, textura e/ou forma.
+\par Já a etapa de representação e descrição, também conhecida como seleção de características, é responsável por identificar novas características em uma área anteriormente identificada, as quais são referentes a cor, textura e/ou forma.
 
 \par Por fim, na última etapa, reconhecimento e interpretação, se dá a rotulação de um ``objeto'' previamente segmentado, ou seja, a imagem é totalmente ou parcialmente reconhecida. Além disso, para um conjunto de ``objetos'' é concedido um significado, o que se refere a interpretação \cite{Gonzalez2009}.
 
@@ -72,7 +72,7 @@ Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma roti
 \section{ÁRVORE GERADORA MÍNIMA}
 \label{sec:arvore}
 
-\par Árvores geradoras mínimas costumam solucionar diversos problemas, um exemplo de sua performance está em projetos de circuitos eletrônicos, pois muitas vezes é necessário fazer a conexão entre pinos de modo que estes estejam eletricamente equivalentes. Tal conexão deve ser feita utilizando o menor custo possível, ou seja, o mínimo de material (fiação), isto caracteriza um problema que procura encontrar a MST dado um grafo \cite{algoritmos}.
+\par Árvores geradoras mínimas costumam solucionar diversos problemas, um exemplo de sua performance está em projetos de circuitos eletrônicos, pois muitas vezes é necessário fazer a conexão entre pinos de modo que estes estejam eletricamente equivalentes. Tal conexão deve ser feita utilizando o menor custo possível, ou seja, o mínimo de material (fiação). Isto caracteriza um problema que procura encontrar a MST dado um grafo \cite{algoritmos}.
 
 \par Considerando um grafo conexo não dirigido $G$ que pode ser representado por $G = (V, E)$, onde $V$ é o conjunto de todos os vértices e $E$ o conjunto de todas as ligações possíveis entre os vértices do grafo $G$. Todas as arestas formadas por uma conexão de um vértice ao outro, representado por $(u, v) \in E$, devem possuir pesos, ou seja, o custo de um vértice ao outro, que simboliza $w(u, v)$. O que é procurado é uma conexão que esteja contida em $E$ de forma que gere um novo grafo $T$ acíclico e conecte todos os vértices. Dessa maneira, conclui-se que uma árvore geradora mínima é um grafo acíclico que busca percorrer o menor caminho possível e que está contido e gerado a partir de um outro grafo \cite{algoritmos}.
 
@@ -82,11 +82,11 @@ Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma roti
     \centering
     \caption{Grafo conexo e MST}
     \includegraphics[width=0.7\textwidth]{./dados/figuras/grafo-mst.png}
-    \fonte{\citeonline{algoritmos}}
+    \fonte{\citeonline{algoritmos}.}
     \label{fig:mst}
 \end{figure}
 
-\par O termo conhecido como ``árvore geradora mínima`` é uma redução da sentença ``árvore geradora de peso mínimo``. Tal explicação se faz necessária, pois existe a possibilidade de que o termo mais comum gera a má interpretação de que o número de arestas de uma árvore geradora foi diminuído, o que não corresponde à verdade.
+\par O termo conhecido como ``árvore geradora mínima`` é uma redução da sentença ``árvore geradora de peso mínimo``. Tal explicação se faz necessária, pois existe a possibilidade de que o termo mais comum gere a má interpretação de que o número de arestas de uma árvore geradora foi diminuído, o que não corresponde à verdade.
 
 \subsection{ALGORITMOS}
 \label{subsec:algoritmosmst}
@@ -107,4 +107,4 @@ Segundo \citeonline{Gonzalez2000}, existe uma divisão de 5 etapas para uma roti
 
 \par O estudo que mais se assemelha com a proposta deste trabalho é o de \citeonline{jarbas-color-texture}, que tem como título: \textit{Color Texture Classification Using Shortest Paths in Graphs}. Apesar de utilizarem o algoritmo de \textit{shortest paths}, caminho mais curto, se aproximam pelo estudo de textura da imagem, a ligação entre os vértices e a forma como a imagem é ``tranformada'' em grafo.
 
-\par Neste trabalho, o algoritmo desenvolvido obteve resultados significativos e potentes na extração de informações presentes na textura das imagens analisadas, sobressaindo até mesmo algoritmos bem estabelecidos atualmente. Desta forma, pode-se concluir que a utilização de grafos para descrição de texturas em imagens se mostra como uma boa oportunidade de campo novo a ser explorado que pode auxiliar no aumento da acurácia e confiança em sistemas de computação visual.
+\par Neste trabalho, o algoritmo desenvolvido obteve resultados significativos e potentes na extração de informações presentes na textura das imagens analisadas, sobressaindo até mesmo algoritmos bem estabelecidos atualmente. Desta forma, pode-se concluir que a utilização de grafos para descrição de texturas em imagens se mostra como uma boa oportunidade de campo novo a ser explorado, e que pode auxiliar no aumento da acurácia e confiança em sistemas de computação visual.
