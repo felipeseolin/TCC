@@ -158,7 +158,7 @@
 \renewcommand{\textual}
 {%
     \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
-    \setcounter{page}{8}
+    \setcounter{page}{10}
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads

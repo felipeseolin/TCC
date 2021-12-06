@@ -4,7 +4,7 @@
 \label{chap:resultados}
 
 \par Neste capítulo serão apresentados os resultados obtidos durante o desenvolvimento e as validações do algoritmo proposto neste trabalho de conclusão de curso. De tal forma, os resultados serão apresentados levando em consideração os \textit{datasets} utilizados e apresentados na \autoref{subsec:datasets} e os métodos apresentados na \autoref{sec:metodo}.
-\par Além disso, mais detalhes como o relatório de classificação pelas classes dos \textit{datasets}, precisão micro e macro, \textit{recall} micro e macro e \textit{F1-score} micro e macro, estão presentes no repositório do Github\footnote{\url{https://github.com/felipeseolin/mst-texture-descriptor-tests}.}.
+\par Além disso, mais detalhes como o relatório de classificação pelas classes dos \textit{datasets}, precisão micro e macro, \textit{recall} micro e macro e \textit{F1-score} micro e macro, estão presentes no repositório do GitHub\footnote{\url{https://github.com/felipeseolin/mst-texture-descriptor-tests}.}.
 
 % Dataset USC-SIPI TEXTURES
 \section{USC-SIPI TEXTURES}
@@ -62,7 +62,7 @@ A \autoref{tab:uscSipiAcuracias} apresenta os resultados das acurácias obtidas 
 \section{KYLBERG}
 \label{sec:kylberg}
 
-\par A partir dos testes realizados no \textit{dataset} Kylberg, foram estraídas as acurácias que estão disponíveis na \autoref{tab:kylbergAcuracias}. Através dos resultados pode-se observar que com o uso de \textit{Decision Tree} o extrator que obteve a melhor acurácia foi o LBP (93,20\%), seguido pelo Haralick (88,28\%) e pelo extrator proposto (88,06\%), respectivamente. Ao utilizar KNN, o extrator LBP apresentou novamente a melhor acurácia (96,21\%), seguido pelo MST (79,46\%). Com o algoritmo de aprendizado supervisionado \textit{Linear} SVC, o extrator LBP apresentou pela terceira vez o melhor resultado no \textit{dataset} (99,33\%), com o segundo lugar para o MST (68,75\%). Por fim, o SVC apresentou-se como o melhor resultado do extrator LBP (94,08\%), seguido por Tamura (64,17\%) e depois pelo extrator proposto (55,92\%). As matrizes de confusão para a comparação entre as melhores acurácias são expressas nas figuras \ref{fig:kylbergDecisionTreeMatrizConfusao}, \ref{fig:kylbergKNNMatrizConfusao}, \ref{fig:kylbergLinearSVCMatrizConfusao} e \ref{fig:kylbergSVCMatrizConfusao}.
+\par A partir dos testes realizados no \textit{dataset} Kylberg, foram estraídas as acurácias que estão disponíveis na \autoref{tab:kylbergAcuracias}. Através dos resultados pode-se observar que com o uso de \textit{Decision Tree} o extrator que obteve a melhor acurácia foi o LBP (93,30\%), seguido pelo Haralick (88,28\%) e pelo extrator proposto (88,06\%), respectivamente. Ao utilizar KNN, o extrator LBP apresentou novamente a melhor acurácia (96,21\%), seguido pelo MST (79,46\%). Com o algoritmo de aprendizado supervisionado \textit{Linear} SVC, o extrator LBP apresentou pela terceira vez o melhor resultado no \textit{dataset} (99,33\%), com o segundo lugar para o MST (68,75\%). Por fim, o SVC apresentou-se como o melhor resultado do extrator LBP (94,08\%), seguido por Tamura (64,17\%) e depois pelo extrator proposto (55,92\%). As matrizes de confusão para a comparação entre as melhores acurácias são expressas nas figuras \ref{fig:kylbergDecisionTreeMatrizConfusao}, \ref{fig:kylbergKNNMatrizConfusao}, \ref{fig:kylbergLinearSVCMatrizConfusao} e \ref{fig:kylbergSVCMatrizConfusao}.
 
 \input{dados/tabelas/resultados/kylberg/acuracias.tex}
 
@@ -102,11 +102,11 @@ A \autoref{tab:uscSipiAcuracias} apresenta os resultados das acurácias obtidas 
 \begin{figure}[H]
     \centering
     \caption{Matrizes de confusão para o \textit{dataset} Kylberg com uso de SVC}
-    \subfloat[\centering LBP]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/lbp-kylberg-linear-svc.png}}}
+    \subfloat[\centering LBP]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/lbp-kylberg-svc.png}}}
     \qquad
-    \subfloat[\centering Haralick]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/haralick-kylberg-linear-svc.png} }}
+    \subfloat[\centering Tamura]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/tamura-kylberg-svc.png} }}
     \qquad
-    \subfloat[\centering MST]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/mst-kylberg-linear-svc.png} }}
+    \subfloat[\centering MST]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/mst-kylberg-svc.png} }}
     \fonte{Autoria Própria.}
     \label{fig:kylbergSVCMatrizConfusao}
 \end{figure}
@@ -138,7 +138,7 @@ A \autoref{tab:uscSipiAcuracias} apresenta os resultados das acurácias obtidas 
     \caption{Matrizes de confusão para o \textit{dataset} USPtex com uso de KNN}
     \subfloat[\centering LBP]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/lbp-usptex-knn.png}}}
     \qquad
-    \subfloat[\centering Tamura]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/mst-usptex-knn.png} }}
+    \subfloat[\centering Tamura]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/tamura-usptex-knn.png} }}
     \qquad
     \subfloat[\centering MST]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/mst-usptex-knn.png} }}
     \fonte{Autoria Própria.}
@@ -160,7 +160,7 @@ A \autoref{tab:uscSipiAcuracias} apresenta os resultados das acurácias obtidas 
     \caption{Matrizes de confusão para o \textit{dataset} USPtex com uso de SVC}
     \subfloat[\centering LBP]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/lbp-usptex-svc.png}}}
     \qquad
-    \subfloat[\centering MST]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/tamura-usptex-svc.png} }}
+    \subfloat[\centering Tamura]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/tamura-usptex-svc.png} }}
     \qquad
     \subfloat[\centering MST]{{\includegraphics[width=0.45\textwidth]{dados/figuras/resultados/matrizes-confusao/mst-usptex-svc.png} }}
     \fonte{Autoria Própria.}
@@ -171,7 +171,7 @@ A \autoref{tab:uscSipiAcuracias} apresenta os resultados das acurácias obtidas 
 \section{VISTEX}
 \label{sec:vistex}
 
-\par Por fim, a tabela \autoref{tab:visTexAcuracias} representa uma comparação entre os valores obtidos das acurácias dos testes realizados no \textit{dataset} VisTex. Com o uso de \textit{Decision Tree} a maior acurácia foi do extrator MST (38,20\%), seguido por Gabor (29,41\%). Já o melhor resultado obtido com KNN, foi do extrator LBP, empatado com Tamura (29,41\%), seguido por Haralick que também ficou empatado com o MST (23,53\%). Para \textit{Linear} SVC, a maior acurácia foi do extrator LBP (52,94\%), seguido por Tamura (23,53\%) e posteriormente pelo MST (14,71\%). Para SVC, os extratores Gabor, Haralick e Tamura obtiveram a mesma acurácia de 26,47\%, seguido do LBP (23,47\%) e por fim MST (17,65\%). As figuras \ref{fig:vistexDecisionTreeMatrizConfusao}, \ref{fig:vistexKNNMatrizConfusao}, \ref{fig:vistexLinearSVCMatrizConfusao} e \ref{fig:vistexSVCMatrizConfusao}, exibem as matrizes de confusão obtidas durante os testes com o \textit{dataset} para fins de comparação.
+\par Por fim, a tabela \autoref{tab:visTexAcuracias} representa uma comparação entre os valores obtidos das acurácias dos testes realizados no \textit{dataset} VisTex. Com o uso de \textit{Decision Tree} a maior acurácia foi do extrator MST (38,24\%), seguido por Gabor (29,41\%). Já o melhor resultado obtido com KNN, foi do extrator LBP, empatado com Tamura (29,41\%), seguido por Haralick que também ficou empatado com o MST (23,53\%). Para \textit{Linear} SVC, a maior acurácia foi do extrator LBP (52,94\%), seguido por Tamura (23,53\%) e posteriormente pelo MST (14,71\%). Para SVC, os extratores Gabor, Haralick e Tamura obtiveram a mesma acurácia de 26,47\%, seguido do LBP (23,53\%) e por fim MST (17,65\%). As figuras \ref{fig:vistexDecisionTreeMatrizConfusao}, \ref{fig:vistexKNNMatrizConfusao}, \ref{fig:vistexLinearSVCMatrizConfusao} e \ref{fig:vistexSVCMatrizConfusao}, exibem as matrizes de confusão obtidas durante os testes com o \textit{dataset} para fins de comparação.
 
 \input{dados/tabelas/resultados/vistex/acuracias.tex}
 
